@@ -1,2 +1,2 @@
 # CytoSnake-Benchmarks
-CytoSnake benchmarks 
+CytoSnake benchmarks
