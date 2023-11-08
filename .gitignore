@@ -1,0 +1,4 @@
+*.bin
+CytoSnake_Benchmarks.egg-info
+*.pyc
+data
