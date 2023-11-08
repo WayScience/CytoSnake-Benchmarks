@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 # flake8: noqa
+
+# # Cell-Health CP feature with CytoSnake's `cp_process` Wortkflow Benchmarking Notebook.
+#
+# This study focuses on benchmarking CytoSnake's cp_process workflow using the Cell-Health dataset. We assess the workflow's performance in terms of time, memory allocation, and memory usage to provide a detailed understanding of its efficiency.
+#
+# Development of this notebook has been heavily influced by `CytoTable-Benchmark` [repo](https://github.com/cytomining/CytoTable-benchmarks/blob/main/notebooks/cytotable_and_pycytominer_analysis.ipynb) developed by [Dave Bunten](https://github.com/d33bs)
 # In[1]:
 
 
@@ -256,6 +262,16 @@ fig.write_image("images/peak_memory_total_allocations.png")
 
 # > **Figure 1**: This figure illustrates the memory usage and total allocations calculated per input dataset. The prefix 'all_inputs' indicates that all plate files were utilized in the execution of this process. Each bar's height corresponds to the peak memory usage of these files, while the color spectrum signifies the number of allocations made by the process throughout the entire workflow execution.
 
+# ## Memory usage and runtime
+#
+# Here, we assess the performance of `cp_process` in terms of memory utilization and runtime. This analysis results in three distinct plots:
+#
+# 1. Peak memory usage for each step.
+# 2. Runtime for each step.
+# 3. Runtime per input in each step."
+#
+#
+
 # In[8]:
 
 
@@ -354,6 +370,7 @@ fig2.write_image("images/time_duration_per_process.png")
 # In[10]:
 
 
+# generating the multi line plots that represents runtime per input in each step
 def clean_script_name(script_name: str) -> str:
     return script_name.split(".")[0]
 
