@@ -86,7 +86,7 @@ def get_benchmark_files(
     # cleaning up extension
     ext = ext.replace(".", "").strip()
     if ext not in ["bin", "json"]:
-        raise ValueError(f"'{ext}' is not a supported extention")
+        raise ValueError(f"'{ext}' is not a supported extension")
 
     # select benchmark files
     bench_files = list(benchmark_path.glob(f"*.{ext}"))
