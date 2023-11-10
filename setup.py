@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 name = "CytoSnake-Benchmarks"
 version = "0.0.1"
-description = "Benchmarking repo for CytoSnake workflows"
+description = "Benchmarking for CytoSnake workflows"
 url = "https://github.com/WayScience/CytoSnake-Benchmarks"
 author = "Erik Serrano"
 author_email = "erik.serrano@cuanschutz.com"
