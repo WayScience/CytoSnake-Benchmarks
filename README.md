@@ -7,9 +7,15 @@ Below we document our benchmarking process, including the datasets used, configu
 
 ## Structure
 
-This repository consists of individual folders, each containing a Jupyter notebook that demonstrates the benchmarking code used for evaluating the performance of CytoSnake workflows.
-These notebooks are structured with a naming convention `{datatype}_{workflow-used}.ipynb`.
-Within each folder, you'll find a README providing information about the benchmark contents, a `figures` folder containing all the generated plots, `data` folder that contains CSV files that store the raw performance data extracted from the benchmarks and associated configuration files used during benchmark execution.
+![image](./images/CytoSnake-Benchmark-Structure.png)
+> CytoSnake-Benchmark repository structure
+
+The image above provides an overview of the CytoSnake-Benchmark repository structure. 
+The central elements include the `src/` directory (red), housing utility functions for processing raw benchmark files and allowing those functions to be modular.
+Adjacent is the `all-benchmarks/` directory (green), acting as a central repository for benchmarks conducted on specific datasets (blue).
+Within each tested benchmark folder (yellow) (e.g inside  `benchmark name 1`)  a jupyter notebook is used to process the benchmark files and generates plots in the `image/` dir and benchmarking results in the `results/` dir.
+Each folder features a detailed `README` specifying test contents and datasets used.
+
 
 Below is a table that describes all of the currently available benchmarks inside the `all-benchmarks` directory:
 | Directory Name              | Description                                                                                                                                                                                                                                                              |
@@ -28,17 +34,13 @@ To get started, follow these steps:
    git clone git@github.com:WayScience/CytoSnake-Benchmarks.git
    ```
 
-2. Install `CytoSnake` using `bioconda`. It's a good practice to create a dedicated environment for `CytoSnake` to avoid any potential dependency conflicts:
+2. To set up the required dependencies, create a `conda` environment by utilizing the `cytosnake_benchmarks.yaml` file.
 
    ```bash
-   conda create -n cytosnake
-   conda activate cytosnake
-   conda install -c bioconda cytosnake
+   conda env create -f env.yaml
    ```
 
-   > **Note**: Setting up a fresh environment for `CytoSnake` installation is highly recommended to ensure a smooth installation process and prevent any dependency conflicts.
-
-   If you have mamba installed, you can replace `conda` with mamba.
+   > **Note**: If you already have `mamba` installed, you can substitute `conda` with `mamba`. It is advised to use `mamba` as it is widely recognized for being a [faster alternative](https://pythonspeed.com/articles/faster-conda-install/) to conda. If you haven't installed mamba yet, you can follow the installation instructions [here](https://mamba.readthedocs.io/en/latest/mamba-installation.html).
 
 ## Creating a benchmark
 
