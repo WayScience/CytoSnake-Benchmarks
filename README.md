@@ -41,7 +41,7 @@ To get started, follow these steps:
 
    > **Note**: If you already have `mamba` installed, you can substitute `conda` with `mamba`. It is advised to use `mamba` as it is widely recognized for being a [faster alternative](https://pythonspeed.com/articles/faster-conda-install/) to conda. If you haven't installed mamba yet, you can follow the installation instructions [here](https://mamba.readthedocs.io/en/latest/mamba-installation.html).
 
-3. Then install the CytoSnake-Benchmark into the local python environment:
+3. Then install the CytoSnake-Benchmark into the local Python environment:
 
    ```bash
    pip install -e .
