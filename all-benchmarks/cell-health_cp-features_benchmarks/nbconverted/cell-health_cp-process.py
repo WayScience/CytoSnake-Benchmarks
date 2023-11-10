@@ -24,7 +24,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 sys.path.append("..")
-from benchmark_utils import get_benchmark_files, create_filename_path_mapping
+from src.benchmark_utils import get_benchmark_files, create_filename_path_mapping
 
 warnings.filterwarnings("ignore")
 
@@ -247,7 +247,8 @@ fig = px.bar(
     template="simple_white",
     barmode="relative",
     labels={"total_allocation": "N_Allocations"},
-)
+    color_continuous_scale="Portland",  
+    )
 fig.update_traces(texttemplate="%{text:.2f} MB", textposition="outside")
 fig.update_layout(
     title="Peak Memory Usage and Total Allocations per Input",
@@ -327,7 +328,7 @@ fig1 = px.line(
     labels={"process_name": "Step", "peak_memory": "Peak Memory (MB)"},
     template="simple_white",
 )
-fig1.update_traces(line=dict(color="red"))
+fig1.update_traces(line=dict(color="purple"))
 fig1.add_annotation(
     text=f"<b>Peak memory usage: {round(step_df['peak_memory'].max(), 2)} MB</b>",
     xref="paper",
@@ -429,7 +430,7 @@ all_steps_df
 # Assign colors corresponding to file size
 colors = np.linspace(0, 1, len(all_steps_df))
 color_scale = (
-    px.colors.cmocean.thermal
+    px.colors.cmocean.haline
 )  # You can choose another color scale if you prefer
 
 # Create a Plotly figure with a line plot for each row and color mapping
@@ -452,7 +453,7 @@ for index, row in all_steps_df.iterrows():
 # Customize the layout
 fig.update_layout(
     title="Time Duration Per Input Each Step",
-    xaxis_title="Steps",
+    xaxis_title="Profiling",
     yaxis_title="Time Duration (sec)",
     template="simple_white",
 )
@@ -493,7 +494,9 @@ fig = px.bar(
         "input_name": "Input Name",
         "time_duration": "Time Duration",
         "peak_memory": "Peak Memory Usage",
+
     },
+    color_continuous_scale="Portland"
 )
 fig.update_traces(texttemplate="%{text:.2f}", textposition="outside")
 
@@ -509,7 +512,7 @@ fig.update_layout(
 fig.show()
 
 # save plot
-fig2.write_image("images/time_durration_and_size.png")
+fig2.write_image("images/bar_time_durration_and_size.png")
 
 
 # > Figure 4: This bar graph illustrates the relationship between `Time Duration` and `Peak Memory Usage` for different input datasets `Plate Name`. Each bar represents the time duration of a specific dataset, with the color indicating the corresponding peak memory usage. The legend displays the scale of peak memory values, while the x-axis represents the input names. 
