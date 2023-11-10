@@ -1,4 +1,8 @@
-*.bin
-CytoSnake_Benchmarks.egg-info
+# python packaging 
+*.egg
+*egg-info/
 *.pyc
+
+# ignore project files
+*.bin
 data
