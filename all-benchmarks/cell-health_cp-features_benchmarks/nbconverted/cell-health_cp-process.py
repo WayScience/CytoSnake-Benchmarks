@@ -1,20 +1,20 @@
 #!/usr/bin/env python
 # coding: utf-8
-# flake8: noqa
 
 # # Cell-Health CP feature with CytoSnake's `cp_process` Wortkflow Benchmarking Notebook.
-#
+# 
 # This study focuses on benchmarking CytoSnake's cp_process workflow using the Cell-Health dataset. We assess the workflow's performance in terms of time, memory allocation, and memory usage to provide a detailed understanding of its efficiency.
-#
+# 
 # Development of this notebook has been heavily influced by `CytoTable-Benchmark` [repo](https://github.com/cytomining/CytoTable-benchmarks/blob/main/notebooks/cytotable_and_pycytominer_analysis.ipynb) developed by [Dave Bunten](https://github.com/d33bs)
+
 # In[1]:
 
 
-import json
+import sys
 import pathlib
 import shutil
 import subprocess
-import sys
+import json
 import warnings
 from datetime import datetime
 
@@ -24,15 +24,15 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 sys.path.append("..")
-from src.common import create_filename_path_mapping, get_benchmark_files
+from src.common import get_benchmark_files, create_filename_path_mapping
 
 warnings.filterwarnings("ignore")
 
 
 # ## Parameters
-#
-# Below are the list of paramters used in this notebook
-#
+# 
+# Below are the list of parameters used in this notebook
+# 
 
 # In[2]:
 
@@ -49,8 +49,8 @@ IMAGE_DIR.mkdir(exist_ok=True)
 
 
 # ## Converting binary files into json files
-#
-# In this section, we will focus on converting the memory output files from binary (`.bin`) format to JSON files.
+# 
+# In this section, we will focus on converting the memory output files from binary (`.bin`) format to JSON files. 
 # These files hold the raw calculations generated during the benchmarking process. To begin, we use the `get_all_bin_files()` to locate all binarized files. The we use the `memray stats` process to convert the `.bin` files into `.json` files iteratively.
 # The resulting JSON file will provide a structured representation of the data, making it more accessible and suitable for analysis.
 
@@ -87,10 +87,10 @@ for bin_path in get_benchmark_files(BENCHMARK_DIR_PATH, ext="bin"):
     )
 
 
-# ## Merging all JSON file data into a single CSV file
-#
-# In the section, we aim to consolidate data from multiple JSON files into a single CSV file.
-# This process involves extracting specific data from each JSON file and structuring it into a CSV table.
+# ## Merging all JSON file data into a single CSV file 
+# 
+# In the section, we aim to consolidate data from multiple JSON files into a single CSV file. 
+# This process involves extracting specific data from each JSON file and structuring it into a CSV table. 
 # The CSV format provides a straightforward, tabular structure for easy analysis, simplifying data handling.
 
 # In[4]:
@@ -111,7 +111,7 @@ for json_file in get_benchmark_files(BENCHMARK_DIR_PATH, ext="json"):
     # get name of sqlite file or input file
     json_file_name = json_file.name.split("_")
 
-    # this assums that all file were used as an input
+    # this assumes that all file were used as an input
     if len(json_file_name) == 2 or json_file_name[0] == "feature":
         name = "all_inputs"
     elif len(json_file_name) >= 3:
@@ -176,7 +176,7 @@ def get_file_size(fname: str, f_mapping: dict) -> float | None:
     return round((pathlib.Path(path).stat().st_size / 1024**2), 3)
 
 
-# create maping
+# create mapping
 input_names = benchmark_df["input_data_name"].unique()
 mapping = create_filename_path_mapping(
     input_names, data_dir=DATA_DIR, data_ext="sqlite"
@@ -190,13 +190,13 @@ benchmark_df
 
 
 # ## Workflow perfroamnce per input.
-# Here we are looking at the perfromance of the workflow per input. Here we are seeing how the workflow handles the data. Here we are checking how much time, resources and memory peak the whole workflow took when analyzing one single sqlite file.
+# Here we are looking at the performance of the workflow per input. Here we are seeing how the workflow handles the data. Here we are checking how much time, resources and memory peak the whole workflow took when analyzing one single sqlite file. 
 
 # In[6]:
 
 
 # group the data frame based on their process input_data_name
-# this demonstrates 1 inputs in all scripts (emulating a snigle process of the workfow
+# this demonstrates 1 inputs in all scripts (emulating a snigle process of the workflow
 group_by_input = benchmark_df.groupby(by=["input_data_name"])
 
 
@@ -225,9 +225,9 @@ workflow_per_input_df.to_csv("workflow_per_input_performance.csv", index=False)
 workflow_per_input_df
 
 
-# ## Total Allocations used
-#
-# The total amount of allocations refers to the count of memory allocations opperations perfromed by the workflow. This occurs when a program requets and recieves memory from the system memory managment system. Therefore, it captures the cumulative amount of dynamically allocated memory in a program, providing insights into its memory footprint and resource management efficiency.
+# ## Total Allocations used 
+# 
+# The total amount of allocations refers to the count of memory allocations operations performed by the workflow. This occurs when a program requests and receives memory from the system memory management system. Therefore, it captures the cumulative amount of dynamically allocated memory in a program, providing insights into its memory footprint and resource management efficiency.
 
 # In[7]:
 
@@ -263,14 +263,14 @@ fig.write_image("images/peak_memory_total_allocations.png")
 # > **Figure 1**: This figure illustrates the memory usage and total allocations calculated per input dataset. The prefix 'all_inputs' indicates that all plate files were utilized in the execution of this process. Each bar's height corresponds to the peak memory usage of these files, while the color spectrum signifies the number of allocations made by the process throughout the entire workflow execution.
 
 # ## Memory usage and runtime
-#
+# 
 # Here, we assess the performance of `cp_process` in terms of memory utilization and runtime. This analysis results in three distinct plots:
-#
+# 
 # 1. Peak memory usage for each step.
 # 2. Runtime for each step.
 # 3. Runtime per input in each step."
-#
-#
+# 
+# 
 
 # In[8]:
 
@@ -300,7 +300,7 @@ step_df
 
 # plot into line graph (memory usage vs step process)
 
-# chaing the order to the process to correctly align with cp_process
+# changing the order to the process to correctly align with cp_process
 correct_order = [
     "aggregate_cells",
     "annotate",
@@ -365,7 +365,7 @@ fig1.write_image("images/peak_memory_per_process.png")
 fig2.write_image("images/time_duration_per_process.png")
 
 
-# > **Figure 2**: This figure provides an insight into the performance of the `cp_process` in CytoSnake, considering memory usage and run time for each step. The top graph depicts the memory usage per step using all available inputs, with the peak memory usage remaining under 4GB. The bottom graph displays the total runtime per step for the entire workflow, revealing that the `aggregation` step consumes the majority of the execution time.
+# > **Figure 2**: This figure provides an insight into the performance of the `cp_process` in CytoSnake, considering memory usage and run time for each step. The top graph depicts the memory usage per step using all available inputs, with the peak memory usage remaining under 4GB. The bottom graph displays the total runtime per step for the entire workflow, revealing that the `aggregation` step consumes the majority of the execution time. 
 
 # In[10]:
 
@@ -465,7 +465,7 @@ fig.write_image("images/time_durration_per_input_each_step.png")
 # > **Figure 3** : Multiline plots representing the time duration of each step for individual inputs. Each line plot corresponds to a single input, and the y-axis represents the amount of time passed during the execution of each step
 
 # ## Looking at time and File size
-#
+# 
 # Here we are exploring  the direct relationship between time, file size, and memory utilization in the 'cp_process' workflow of CytoSnake. This analysis aims to establish a quantitative connection between these variables, providing a clearer understanding of how they impact the workflow's performance and resource utilization.
 
 # In[12]:
@@ -512,4 +512,4 @@ fig.show()
 fig2.write_image("images/time_durration_and_size.png")
 
 
-# > Figure 4: This bar graph illustrates the relationship between `Time Duration` and `Peak Memory Usage` for different input datasets `Plate Name`. Each bar represents the time duration of a specific dataset, with the color indicating the corresponding peak memory usage. The legend displays the scale of peak memory values, while the x-axis represents the input names.
+# > Figure 4: This bar graph illustrates the relationship between `Time Duration` and `Peak Memory Usage` for different input datasets `Plate Name`. Each bar represents the time duration of a specific dataset, with the color indicating the corresponding peak memory usage. The legend displays the scale of peak memory values, while the x-axis represents the input names. 

@@ -1,4 +1,4 @@
-# python packaging 
+# python packaging
 *.egg
 *egg-info/
 *.pyc
