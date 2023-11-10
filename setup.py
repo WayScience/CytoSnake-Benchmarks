@@ -13,7 +13,6 @@ setup(
     name=name,
     version=version,
     description=description,
-    long_description="A longer description of your project",
     url=url,
     author=author,
     author_email=author_email,

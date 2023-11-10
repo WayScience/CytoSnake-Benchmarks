@@ -24,7 +24,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 sys.path.append("..")
-from src.common import get_benchmark_files, create_filename_path_mapping
+from benchmark_utils import get_benchmark_files, create_filename_path_mapping
 
 warnings.filterwarnings("ignore")
 

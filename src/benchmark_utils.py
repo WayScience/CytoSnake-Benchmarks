@@ -1,5 +1,5 @@
 """
-Module: common.py
+Module: benchmark_utils.py
 
 Description:
 The `common.py` module contains essential I/O and file manipulation utilities
