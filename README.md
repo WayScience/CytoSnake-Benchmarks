@@ -10,12 +10,11 @@ Below we document our benchmarking process, including the datasets used, configu
 ![image](./images/CytoSnake-Benchmark-Structure.png)
 > CytoSnake-Benchmark repository structure
 
-The image above provides an overview of the CytoSnake-Benchmark repository structure. 
+The image above provides an overview of the CytoSnake-Benchmark repository structure.
 The central elements include the `src/` directory (red), housing utility functions for processing raw benchmark files and allowing those functions to be modular.
 Adjacent is the `all-benchmarks/` directory (green), acting as a central repository for benchmarks conducted on specific datasets (blue).
 Within each tested benchmark folder (yellow) (e.g inside  `benchmark name 1`)  a jupyter notebook is used to process the benchmark files and generates plots in the `image/` dir and benchmarking results in the `results/` dir.
 Each folder features a detailed `README` specifying test contents and datasets used.
-
 
 Below is a table that describes all of the currently available benchmarks inside the `all-benchmarks` directory:
 | Directory Name              | Description                                                                                                                                                                                                                                                              |
@@ -41,6 +40,14 @@ To get started, follow these steps:
    ```
 
    > **Note**: If you already have `mamba` installed, you can substitute `conda` with `mamba`. It is advised to use `mamba` as it is widely recognized for being a [faster alternative](https://pythonspeed.com/articles/faster-conda-install/) to conda. If you haven't installed mamba yet, you can follow the installation instructions [here](https://mamba.readthedocs.io/en/latest/mamba-installation.html).
+
+3. Then install the CytoSnake-Benchmark into the local python environment:
+
+   ```bash
+   pip install -e .
+   ```
+
+   This will give the notebooks to have access to all the functions within the `src/` directory.
 
 ## Creating a benchmark
 
