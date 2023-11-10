@@ -3,6 +3,7 @@ name: cytosnake_benchmarks
 channels:
   - anaconda
   - conda-forge
+  - bioconda
 
 dependencies:
   - python>=3.10
@@ -14,5 +15,6 @@ dependencies:
   - jupyter
   - pre-commit
   - plotly
+  - cytosnake
   - pip:
     - memray

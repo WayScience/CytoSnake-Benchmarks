@@ -96,40 +96,6 @@ def get_benchmark_files(
     return bench_files
 
 
-# TODO: work in progress
-def report_plots_to_readme(readme_path: str | pathlib.Path) -> None:
-    """Adds performance report into the benchmark readme
-
-    Parameters
-    ----------
-    readme_path : str | pathlib.Path
-        _description_
-    """
-
-    readme_path = validate_path(readme_path)
-    # check if "## generated plots exists within the read me"
-    # if so, skip
-    with open(readme_path, mode="r", encoding="utf-8") as contents:
-        md_lines = contents.readlines()
-
-    if not any(line.strip() == "## generated plots" for line in md_lines):
-        # grab paths of generated plots and convert into dict
-
-        ## append new contents to md file
-        with open(readme_path, mode="a", encoding="utf-8") as stream:
-            # create a docstring that will be added into the readme
-            report = """
-            add new contents here
-
-
-            """
-
-            # append to md file
-            stream.write(report)
-
-    # if the content already exists, there's no need to run this.
-    print("Warning: plot already exists in the MD file. Skipping...")
-
 
 def create_filename_path_mapping(
     fnames: str | list[str], data_dir: str | pathlib.Path, data_ext: str
