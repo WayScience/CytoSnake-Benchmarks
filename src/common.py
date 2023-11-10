@@ -98,7 +98,7 @@ def get_benchmark_files(
 
 # TODO: work in progress
 def report_plots_to_readme(readme_path: str | pathlib.Path) -> None:
-    """Adds perfromance report into the benchmark readme
+    """Adds performance report into the benchmark readme
 
     Parameters
     ----------
