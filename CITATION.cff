@@ -1,0 +1,23 @@
+cff-version: 1.0.3
+message: Please use the citation below to cite this repository.
+title: CytoSnake-Benchmarks
+version: 0.0.1
+authors:
+  - name: Erik Serrano
+    orcid: https://orcid.org/0000-0003-4188-9080
+    affiliation: University of Colorado, Anschutz Medical Campus
+    email: erik.serrano@cuanschutz.edu
+license: BSD-3-Clause
+keywords:
+  - benchmarking
+  - workflows
+  - snakemake
+repository-code: https://github.com/username/repo
+
+# below are datasets used under this repo
+dependencies:
+  - name: Cell-Health Cell Painting Single Cell Profiles
+    version: 5.0.0
+    doi: https://doi.org/10.1091/mbc.E20-12-0784.
+  - name: NF1 Cell Painting Data
+    url: https://github.com/WayScience/nf1_cellpainting_data

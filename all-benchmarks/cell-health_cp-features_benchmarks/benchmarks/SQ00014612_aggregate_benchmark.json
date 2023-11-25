@@ -1,0 +1,117 @@
+{
+    "total_num_allocations": 96859851,
+    "total_bytes_allocated": 531327588613,
+    "allocation_size_histogram": [
+        {
+            "min_bytes": 0,
+            "max_bytes": 4,
+            "count": 7090
+        },
+        {
+            "min_bytes": 5,
+            "max_bytes": 31,
+            "count": 7021845
+        },
+        {
+            "min_bytes": 32,
+            "max_bytes": 180,
+            "count": 6363837
+        },
+        {
+            "min_bytes": 181,
+            "max_bytes": 1029,
+            "count": 56672506
+        },
+        {
+            "min_bytes": 1030,
+            "max_bytes": 5834,
+            "count": 22049412
+        },
+        {
+            "min_bytes": 5835,
+            "max_bytes": 33058,
+            "count": 2810346
+        },
+        {
+            "min_bytes": 33059,
+            "max_bytes": 187285,
+            "count": 1907984
+        },
+        {
+            "min_bytes": 187286,
+            "max_bytes": 1061011,
+            "count": 8842
+        },
+        {
+            "min_bytes": 1061012,
+            "max_bytes": 6010842,
+            "count": 2236
+        },
+        {
+            "min_bytes": 6010843,
+            "max_bytes": 34052616,
+            "count": 15753
+        }
+    ],
+    "allocator_type_distribution": {
+        "MALLOC": 85825055,
+        "REALLOC": 10958642,
+        "CALLOC": 75354,
+        "MMAP": 800
+    },
+    "top_allocations_by_size": [
+        {
+            "location": "convert:/home/erikserrano/Programs/miniconda3/envs/cytosnake/lib/python3.10/site-packages/pandas/core/internals/construction.py:1030",
+            "size": 104514271001
+        },
+        {
+            "location": "copy:/home/erikserrano/Programs/miniconda3/envs/cytosnake/lib/python3.10/site-packages/pandas/core/internals/blocks.py:645",
+            "size": 61281824232
+        },
+        {
+            "location": "_take_nd_ndarray:/home/erikserrano/Programs/miniconda3/envs/cytosnake/lib/python3.10/site-packages/pandas/core/array_algos/take.py:158",
+            "size": 61117296176
+        },
+        {
+            "location": "fetchall:/home/erikserrano/Programs/miniconda3/envs/cytosnake/lib/python3.10/site-packages/sqlalchemy/engine/cursor.py:991",
+            "size": 53346408976
+        },
+        {
+            "location": "concatenate:<__array_function__ internals>:200",
+            "size": 42269636335
+        }
+    ],
+    "top_allocations_by_count": [
+        {
+            "location": "fetchall:/home/erikserrano/Programs/miniconda3/envs/cytosnake/lib/python3.10/site-packages/sqlalchemy/engine/cursor.py:991",
+            "count": 56179259
+        },
+        {
+            "location": "iget:/home/erikserrano/Programs/miniconda3/envs/cytosnake/lib/python3.10/site-packages/pandas/core/internals/managers.py:1000",
+            "count": 11427213
+        },
+        {
+            "location": "do_execute:/home/erikserrano/Programs/miniconda3/envs/cytosnake/lib/python3.10/site-packages/sqlalchemy/engine/default.py:736",
+            "count": 5606354
+        },
+        {
+            "location": "<listcomp>:/home/erikserrano/Programs/miniconda3/envs/cytosnake/lib/python3.10/site-packages/sqlalchemy/engine/result.py:403",
+            "count": 4295315
+        },
+        {
+            "location": "_convert_arrays_to_dataframe:/home/erikserrano/Programs/miniconda3/envs/cytosnake/lib/python3.10/site-packages/pandas/io/sql.py:154",
+            "count": 4262357
+        }
+    ],
+    "metadata": {
+        "start_time": "2023-10-25 12:22:34.029000",
+        "end_time": "2023-10-25 12:42:48.903000",
+        "total_allocations": 193718927,
+        "total_frames": 1317,
+        "peak_memory": 611115295,
+        "command_line": "/home/erikserrano/test/test-cytosnake/.snakemake/scripts/tmp2f3l4ygm.aggregate_cells.py",
+        "pid": 290545,
+        "python_allocator": "pymalloc",
+        "has_native_traces": false
+    }
+}
