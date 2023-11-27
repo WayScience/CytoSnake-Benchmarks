@@ -1,0 +1,117 @@
+{
+  "total_num_allocations": 1007729,
+  "total_bytes_allocated": 485454717,
+  "allocation_size_histogram": [
+    {
+      "min_bytes": 0,
+      "max_bytes": 4,
+      "count": 33184
+    },
+    {
+      "min_bytes": 5,
+      "max_bytes": 30,
+      "count": 417397
+    },
+    {
+      "min_bytes": 31,
+      "max_bytes": 172,
+      "count": 479432
+    },
+    {
+      "min_bytes": 173,
+      "max_bytes": 969,
+      "count": 69503
+    },
+    {
+      "min_bytes": 970,
+      "max_bytes": 5417,
+      "count": 4092
+    },
+    {
+      "min_bytes": 5418,
+      "max_bytes": 30244,
+      "count": 2253
+    },
+    {
+      "min_bytes": 30245,
+      "max_bytes": 168821,
+      "count": 1741
+    },
+    {
+      "min_bytes": 168822,
+      "max_bytes": 942336,
+      "count": 109
+    },
+    {
+      "min_bytes": 942337,
+      "max_bytes": 5259955,
+      "count": 9
+    },
+    {
+      "min_bytes": 5259956,
+      "max_bytes": 29360128,
+      "count": 9
+    }
+  ],
+  "allocator_type_distribution": {
+    "MALLOC": 1005349,
+    "REALLOC": 2269,
+    "MMAP": 62,
+    "CALLOC": 49
+  },
+  "top_allocations_by_size": [
+    {
+      "location": "write_table:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/parquet/core.py:1079",
+      "size": 154167865
+    },
+    {
+      "location": "<stack trace unavailable>",
+      "size": 98645344
+    },
+    {
+      "location": "_interleave:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pandas/core/internals/managers.py:1768",
+      "size": 71206448
+    },
+    {
+      "location": "_replace_nan:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/numpy/lib/nanfunctions.py:107",
+      "size": 47470976
+    },
+    {
+      "location": "_take_nd_ndarray:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pandas/core/array_algos/take.py:157",
+      "size": 23913840
+    }
+  ],
+  "top_allocations_by_count": [
+    {
+      "location": "<stack trace unavailable>",
+      "count": 447712
+    },
+    {
+      "location": "write_table:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/parquet/core.py:1079",
+      "count": 365815
+    },
+    {
+      "location": "__init__:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/parquet/core.py:990",
+      "count": 45559
+    },
+    {
+      "location": "read:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/parquet/core.py:2601",
+      "count": 42371
+    },
+    {
+      "location": "close:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/parquet/core.py:1086",
+      "count": 34988
+    }
+  ],
+  "metadata": {
+    "start_time": "2023-11-09 12:15:00.073000",
+    "end_time": "2023-11-09 12:15:01.863000",
+    "total_allocations": 2015427,
+    "total_frames": 432,
+    "peak_memory": 107248916,
+    "command_line": "2.pycytominer_singlecell_pipelines.py",
+    "pid": 296901,
+    "python_allocator": "pymalloc",
+    "has_native_traces": false
+  }
+}
