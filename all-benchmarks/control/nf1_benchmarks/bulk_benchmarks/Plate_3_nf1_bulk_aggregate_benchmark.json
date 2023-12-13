@@ -1,117 +1,117 @@
 {
-  "total_num_allocations": 679658,
-  "total_bytes_allocated": 1815304395,
-  "allocation_size_histogram": [
-    {
-      "min_bytes": 0,
-      "max_bytes": 6,
-      "count": 2310
+    "total_num_allocations": 679658,
+    "total_bytes_allocated": 1815304395,
+    "allocation_size_histogram": [
+        {
+            "min_bytes": 0,
+            "max_bytes": 6,
+            "count": 2310
+        },
+        {
+            "min_bytes": 7,
+            "max_bytes": 49,
+            "count": 458584
+        },
+        {
+            "min_bytes": 50,
+            "max_bytes": 361,
+            "count": 155056
+        },
+        {
+            "min_bytes": 362,
+            "max_bytes": 2583,
+            "count": 51407
+        },
+        {
+            "min_bytes": 2584,
+            "max_bytes": 18422,
+            "count": 2735
+        },
+        {
+            "min_bytes": 18423,
+            "max_bytes": 131352,
+            "count": 260
+        },
+        {
+            "min_bytes": 131353,
+            "max_bytes": 936515,
+            "count": 9298
+        },
+        {
+            "min_bytes": 936516,
+            "max_bytes": 6677115,
+            "count": 7
+        },
+        {
+            "min_bytes": 6677116,
+            "max_bytes": 47606095,
+            "count": 0
+        },
+        {
+            "min_bytes": 47606096,
+            "max_bytes": 339419031,
+            "count": 1
+        }
+    ],
+    "allocator_type_distribution": {
+        "MALLOC": 676408,
+        "CALLOC": 2331,
+        "REALLOC": 886,
+        "MMAP": 33
     },
-    {
-      "min_bytes": 7,
-      "max_bytes": 49,
-      "count": 458584
-    },
-    {
-      "min_bytes": 50,
-      "max_bytes": 361,
-      "count": 155056
-    },
-    {
-      "min_bytes": 362,
-      "max_bytes": 2583,
-      "count": 51407
-    },
-    {
-      "min_bytes": 2584,
-      "max_bytes": 18422,
-      "count": 2735
-    },
-    {
-      "min_bytes": 18423,
-      "max_bytes": 131352,
-      "count": 260
-    },
-    {
-      "min_bytes": 131353,
-      "max_bytes": 936515,
-      "count": 9298
-    },
-    {
-      "min_bytes": 936516,
-      "max_bytes": 6677115,
-      "count": 7
-    },
-    {
-      "min_bytes": 6677116,
-      "max_bytes": 47606095,
-      "count": 0
-    },
-    {
-      "min_bytes": 47606096,
-      "max_bytes": 339419031,
-      "count": 1
+    "top_allocations_by_size": [
+        {
+            "location": "_call_cython_op:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pandas/core/groupby/ops.py:560",
+            "size": 682243248
+        },
+        {
+            "location": "copy:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pandas/core/internals/blocks.py:540",
+            "size": 342817232
+        },
+        {
+            "location": "_take_nd_ndarray:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pandas/core/array_algos/take.py:157",
+            "size": 341343344
+        },
+        {
+            "location": "astype_array:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pandas/core/dtypes/astype.py:179",
+            "size": 339717816
+        },
+        {
+            "location": "write_table:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/parquet/core.py:1079",
+            "size": 51326611
+        }
+    ],
+    "top_allocations_by_count": [
+        {
+            "location": "write_table:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/parquet/core.py:1079",
+            "count": 475066
+        },
+        {
+            "location": "__init__:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/parquet/core.py:990",
+            "count": 60162
+        },
+        {
+            "location": "close:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/parquet/core.py:1086",
+            "count": 46231
+        },
+        {
+            "location": "convert_column:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/pandas_compat.py:592",
+            "count": 27716
+        },
+        {
+            "location": "write:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pandas/io/parquet.py:159",
+            "count": 11559
+        }
+    ],
+    "metadata": {
+        "start_time": "2023-11-09 11:58:53.721000",
+        "end_time": "2023-11-09 11:58:56.009000",
+        "total_allocations": 1359310,
+        "total_frames": 422,
+        "peak_memory": 686633456,
+        "command_line": "1.pycytominer_bulk_pipelines.py",
+        "pid": 295147,
+        "python_allocator": "pymalloc",
+        "has_native_traces": false
     }
-  ],
-  "allocator_type_distribution": {
-    "MALLOC": 676408,
-    "CALLOC": 2331,
-    "REALLOC": 886,
-    "MMAP": 33
-  },
-  "top_allocations_by_size": [
-    {
-      "location": "_call_cython_op:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pandas/core/groupby/ops.py:560",
-      "size": 682243248
-    },
-    {
-      "location": "copy:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pandas/core/internals/blocks.py:540",
-      "size": 342817232
-    },
-    {
-      "location": "_take_nd_ndarray:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pandas/core/array_algos/take.py:157",
-      "size": 341343344
-    },
-    {
-      "location": "astype_array:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pandas/core/dtypes/astype.py:179",
-      "size": 339717816
-    },
-    {
-      "location": "write_table:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/parquet/core.py:1079",
-      "size": 51326611
-    }
-  ],
-  "top_allocations_by_count": [
-    {
-      "location": "write_table:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/parquet/core.py:1079",
-      "count": 475066
-    },
-    {
-      "location": "__init__:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/parquet/core.py:990",
-      "count": 60162
-    },
-    {
-      "location": "close:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/parquet/core.py:1086",
-      "count": 46231
-    },
-    {
-      "location": "convert_column:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pyarrow/pandas_compat.py:592",
-      "count": 27716
-    },
-    {
-      "location": "write:/home/erikserrano/Programs/miniconda3/envs/nf1_cellpainting_data/lib/python3.8/site-packages/pandas/io/parquet.py:159",
-      "count": 11559
-    }
-  ],
-  "metadata": {
-    "start_time": "2023-11-09 11:58:53.721000",
-    "end_time": "2023-11-09 11:58:56.009000",
-    "total_allocations": 1359310,
-    "total_frames": 422,
-    "peak_memory": 686633456,
-    "command_line": "1.pycytominer_bulk_pipelines.py",
-    "pid": 295147,
-    "python_allocator": "pymalloc",
-    "has_native_traces": false
-  }
 }
