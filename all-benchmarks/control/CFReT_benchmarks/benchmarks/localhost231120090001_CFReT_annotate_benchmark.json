@@ -1,0 +1,118 @@
+{
+  "total_num_allocations": 581511,
+  "total_bytes_allocated": 2097084495,
+  "allocation_size_histogram": [
+    {
+      "min_bytes": 0,
+      "max_bytes": 5,
+      "count": 2031
+    },
+    {
+      "min_bytes": 6,
+      "max_bytes": 46,
+      "count": 337108
+    },
+    {
+      "min_bytes": 47,
+      "max_bytes": 330,
+      "count": 201016
+    },
+    {
+      "min_bytes": 331,
+      "max_bytes": 2292,
+      "count": 36867
+    },
+    {
+      "min_bytes": 2293,
+      "max_bytes": 15870,
+      "count": 317
+    },
+    {
+      "min_bytes": 15871,
+      "max_bytes": 109833,
+      "count": 2312
+    },
+    {
+      "min_bytes": 109834,
+      "max_bytes": 760084,
+      "count": 1842
+    },
+    {
+      "min_bytes": 760085,
+      "max_bytes": 5260000,
+      "count": 12
+    },
+    {
+      "min_bytes": 5260001,
+      "max_bytes": 36400643,
+      "count": 0
+    },
+    {
+      "min_bytes": 36400644,
+      "max_bytes": 251902400,
+      "count": 6
+    }
+  ],
+  "allocator_type_distribution": {
+    "MALLOC": 581100,
+    "REALLOC": 347,
+    "CALLOC": 39,
+    "MMAP": 25
+  },
+  "top_allocations_by_size": [
+    {
+      "location": "_take_nd_ndarray:/home/erikserrano/Programs/miniconda3/envs/cfret_data_env/lib/python3.8/site-packages/pandas/core/array_algos/take.py:157",
+      "size": 1010990080
+    },
+    {
+      "location": "write_table:/home/erikserrano/Programs/miniconda3/envs/cfret_data_env/lib/python3.8/site-packages/pyarrow/parquet/core.py:1092",
+      "size": 536956737
+    },
+    {
+      "location": "copy:/home/erikserrano/Programs/miniconda3/envs/cfret_data_env/lib/python3.8/site-packages/pandas/core/internals/blocks.py:540",
+      "size": 506688304
+    },
+    {
+      "location": "close:/home/erikserrano/Programs/miniconda3/envs/cfret_data_env/lib/python3.8/site-packages/pyarrow/parquet/core.py:1099",
+      "size": 9650410
+    },
+    {
+      "location": "__init__:/home/erikserrano/Programs/miniconda3/envs/cfret_data_env/lib/python3.8/site-packages/pyarrow/parquet/core.py:1001",
+      "size": 8429292
+    }
+  ],
+  "top_allocations_by_count": [
+    {
+      "location": "write_table:/home/erikserrano/Programs/miniconda3/envs/cfret_data_env/lib/python3.8/site-packages/pyarrow/parquet/core.py:1092",
+      "count": 438631
+    },
+    {
+      "location": "__init__:/home/erikserrano/Programs/miniconda3/envs/cfret_data_env/lib/python3.8/site-packages/pyarrow/parquet/core.py:1001",
+      "count": 52818
+    },
+    {
+      "location": "close:/home/erikserrano/Programs/miniconda3/envs/cfret_data_env/lib/python3.8/site-packages/pyarrow/parquet/core.py:1099",
+      "count": 40568
+    },
+    {
+      "location": "convert_column:/home/erikserrano/Programs/miniconda3/envs/cfret_data_env/lib/python3.8/site-packages/pyarrow/pandas_compat.py:592",
+      "count": 24404
+    },
+    {
+      "location": "write:/home/erikserrano/Programs/miniconda3/envs/cfret_data_env/lib/python3.8/site-packages/pandas/io/parquet.py:159",
+      "count": 10144
+    }
+  ],
+  "metadata": {
+    "start_time": "2023-12-13 11:09:07.399000",
+    "end_time": "2023-12-13 11:09:10.065000",
+    "total_allocations": 1162900,
+    "total_frames": 328,
+    "peak_memory": 508976514,
+    "command_line": "1.single_cell_processing.py",
+    "pid": 15073,
+    "python_allocator": "pymalloc",
+    "has_native_traces": false,
+    "trace_python_allocators": false
+  }
+}
