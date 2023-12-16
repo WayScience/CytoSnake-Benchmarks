@@ -19,11 +19,12 @@ The benchmark was conducted using a specific version of the NF1-data repo. You c
 
 ## Benchmarking Details
 
-The benchmarking process utilized the `memray` tool to assess the [2.pycytominer_singlecell_pipelines.ipynb](https://github.com/WayScience/nf1_cellpainting_data/blob/main/3.processing_features/2.pycytominer_singlecell_pipelines.ipynb) pipeline.
+The benchmarking process utilized the [`memray`](https://bloomberg.github.io/memray/) tool to assess the [2.pycytominer_singlecell_pipelines.ipynb](https://github.com/WayScience/nf1_cellpainting_data/blob/main/3.processing_features/2.pycytominer_singlecell_pipelines.ipynb) pipeline.
 The primary steps conducted by [`pycytominer`](https://github.com/cytomining/pycytominer) included annotation, normalization, and feature selection.
 Comprehensive documentation for these processes can be found [here](https://pycytominer.readthedocs.io/en/stable/).
 
-For each step in the pipeline, profiling was performed independently, resulting in benchmark reports named in the format `{plate_name}_nf1_{data-type}_{process}_benchmarks.bin`. These files contain detailed information on resource usage and runtime.
+For each step in the pipeline, profiling was performed independently, resulting in benchmark reports named in the format `{plate_name}_nf1_{data-type}_{process}_benchmarks.bin`.
+These files contain detailed information on resource usage and runtime.
 The individual benchmark reports were then merged into a centralized benchmark file named `nf1_complete_benchmark.csv`.
 
 ### Types of benchmarks
