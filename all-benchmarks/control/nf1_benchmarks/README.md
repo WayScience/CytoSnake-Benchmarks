@@ -36,3 +36,14 @@ There are two folders that contains the benchmarks of the pipeline with the sele
 1. **`single_benchmarks`**: Contains benchmarks associated with the single-cell data processing pipeline.
 
 2. **`bulk_benchmarks`**: Encompasses benchmarks related to the bulk data processing pipeline.
+## How to run the benchmarks
+
+To start the benchmark process, execute the shell script:
+
+```bash
+# Execute the benchmarking script
+./run_benchmarks.sh
+```
+> **Note**: Before running this script, rename the existing benchmark directories to a different name (e.g., _benchmarks) as the script will create an additional benchmark folder.
+
+Upon completion of the shell script, you should receive a "complete message," with the `bulk_benchmarks` and `single_benchmarks` folders created.
