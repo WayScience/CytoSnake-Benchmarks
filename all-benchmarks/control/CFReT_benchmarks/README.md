@@ -26,3 +26,15 @@ Comprehensive documentation for these processes can be found [here](https://pycy
 For each step in the pipeline, profiling was performed independently, resulting in benchmark reports named in the format `{plate_name}_nf1_{data-type}_{process}_benchmarks.bin`.
 These files contain detailed information on resource usage and runtime.
 The individual benchmark reports were then merged into a centralized benchmark file named `nf1_complete_benchmark.csv`.
+
+## How to run the benchmarks
+
+To start the benchmark process, execute the shell script:
+
+```bash
+# Execute the benchmarking script
+./run_benchmarks.sh
+```
+> **Note**: Before running this script, rename the existing benchmark directory to a different name (e.g., _benchmarks) as the script will create an additional benchmark folder.
+
+Upon completion of the shell script, you should receive a "complete message," and a new `benchmarks` folder will be created.
