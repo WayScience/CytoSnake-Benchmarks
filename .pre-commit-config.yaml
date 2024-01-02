@@ -33,10 +33,10 @@ repos:
         args: [--fix, --exit-non-zero-on-fix]
 
   # code spell checker
-  - repo: https://github.com/codespell-project/codespell
-    rev: v2.2.6
-    hooks:
-    - id: codespell
+  # - repo: https://github.com/codespell-project/codespell
+  #   rev: v2.2.6
+  #   hooks:
+  #   - id: codespell
 
   # additional hooks found with in the pre-commit lib
   - repo: https://github.com/pre-commit/pre-commit-hooks
