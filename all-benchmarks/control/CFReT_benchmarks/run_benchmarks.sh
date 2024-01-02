@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# NOTE: Before running this script, rename the existing benchmark directories to a different name (e.g., _benchmarks)
+# as the script will create an additional benchmark folder
+
 # exit on first error encountered:
 set -e
 
