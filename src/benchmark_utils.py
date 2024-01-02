@@ -96,7 +96,6 @@ def get_benchmark_files(
     return bench_files
 
 
-
 def create_filename_path_mapping(
     fnames: str | list[str], data_dir: str | pathlib.Path, data_ext: str
 ) -> dict:
