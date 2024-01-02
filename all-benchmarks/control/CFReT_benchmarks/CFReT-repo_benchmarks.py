@@ -33,8 +33,8 @@ from src.benchmark_utils import get_benchmark_files  # noqa
 working_dir = pathlib.Path().resolve()
 benchmark_dir = pathlib.Path("./benchmarks").resolve(strict=True)
 
-# outputs paths
-# single_benchmark_csv = working_dir / "single_benchmarks.csv"
+# outputs
+profile_out = working_dir / "CFReT_complete_benchmark_profile.csv"
 
 
 # ## Loading all JSON files
@@ -99,5 +99,5 @@ for single_json_file in single_json_files:
 
 # create to dataframe
 benchmark_df = pd.DataFrame(raw_benchmark_data)
-benchmark_df.to_csv("CFReT_complete_benchmark.csv", index=False)
+benchmark_df.to_csv(profile_out, index=False)
 benchmark_df
