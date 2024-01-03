@@ -1,0 +1,117 @@
+{
+    "total_num_allocations": 97183126,
+    "total_bytes_allocated": 36073230593,
+    "allocation_size_histogram": [
+        {
+            "min_bytes": 0,
+            "max_bytes": 6,
+            "count": 1222856
+        },
+        {
+            "min_bytes": 7,
+            "max_bytes": 59,
+            "count": 11763648
+        },
+        {
+            "min_bytes": 60,
+            "max_bytes": 468,
+            "count": 83038271
+        },
+        {
+            "min_bytes": 469,
+            "max_bytes": 3649,
+            "count": 894780
+        },
+        {
+            "min_bytes": 3650,
+            "max_bytes": 28376,
+            "count": 137948
+        },
+        {
+            "min_bytes": 28377,
+            "max_bytes": 220584,
+            "count": 123205
+        },
+        {
+            "min_bytes": 220585,
+            "max_bytes": 1714638,
+            "count": 1539
+        },
+        {
+            "min_bytes": 1714639,
+            "max_bytes": 13328119,
+            "count": 837
+        },
+        {
+            "min_bytes": 13328120,
+            "max_bytes": 103601254,
+            "count": 32
+        },
+        {
+            "min_bytes": 103601255,
+            "max_bytes": 805306368,
+            "count": 10
+        }
+    ],
+    "allocator_type_distribution": {
+        "MALLOC": 96946953,
+        "REALLOC": 150561,
+        "CALLOC": 84939,
+        "MMAP": 673
+    },
+    "top_allocations_by_size": [
+        {
+            "location": "to_native_types:/home/erikserrano/Benchmarks/cytosnake-cp-process-singlecell-CFReT-data/.snakemake/conda/aeb09a1dc111078f104758adff22f706_/lib/python3.9/site-packages/pandas/core/internals/blocks.py:2545",
+            "size": 10909900392
+        },
+        {
+            "location": "to_native_types:/home/erikserrano/Benchmarks/cytosnake-cp-process-singlecell-CFReT-data/.snakemake/conda/aeb09a1dc111078f104758adff22f706_/lib/python3.9/site-packages/pandas/core/internals/blocks.py:2540",
+            "size": 10126926848
+        },
+        {
+            "location": "_save_chunk:/home/erikserrano/Benchmarks/cytosnake-cp-process-singlecell-CFReT-data/.snakemake/conda/aeb09a1dc111078f104758adff22f706_/lib/python3.9/site-packages/pandas/io/formats/csvs.py:320",
+            "size": 4040392162
+        },
+        {
+            "location": "<stack trace unavailable>",
+            "size": 3353818977
+        },
+        {
+            "location": "_take_nd_ndarray:/home/erikserrano/Benchmarks/cytosnake-cp-process-singlecell-CFReT-data/.snakemake/conda/aeb09a1dc111078f104758adff22f706_/lib/python3.9/site-packages/pandas/core/array_algos/take.py:158",
+            "size": 2554439344
+        }
+    ],
+    "top_allocations_by_count": [
+        {
+            "location": "to_native_types:/home/erikserrano/Benchmarks/cytosnake-cp-process-singlecell-CFReT-data/.snakemake/conda/aeb09a1dc111078f104758adff22f706_/lib/python3.9/site-packages/pandas/core/internals/blocks.py:2545",
+            "count": 79007561
+        },
+        {
+            "location": "<stack trace unavailable>",
+            "count": 14060550
+        },
+        {
+            "location": "read:/home/erikserrano/Benchmarks/cytosnake-cp-process-singlecell-CFReT-data/.snakemake/conda/aeb09a1dc111078f104758adff22f706_/lib/python3.9/site-packages/pyarrow/parquet/core.py:2631",
+            "count": 1754596
+        },
+        {
+            "location": "iget:/home/erikserrano/Benchmarks/cytosnake-cp-process-singlecell-CFReT-data/.snakemake/conda/aeb09a1dc111078f104758adff22f706_/lib/python3.9/site-packages/pandas/core/internals/blocks.py:1014",
+            "count": 1628124
+        },
+        {
+            "location": "__init__:/home/erikserrano/Benchmarks/cytosnake-cp-process-singlecell-CFReT-data/.snakemake/conda/aeb09a1dc111078f104758adff22f706_/lib/python3.9/site-packages/pyarrow/parquet/core.py:2496",
+            "count": 437471
+        }
+    ],
+    "metadata": {
+        "start_time": "2024-01-03 13:48:58.077000",
+        "end_time": "2024-01-03 13:52:40.062000",
+        "total_allocations": 194364341,
+        "total_frames": 824,
+        "peak_memory": 4105146214,
+        "command_line": "/home/erikserrano/Benchmarks/cytosnake-cp-process-singlecell-CFReT-data/.snakemake/scripts/tmpdne9j6no.annotate.py",
+        "pid": 661004,
+        "python_allocator": "pymalloc",
+        "has_native_traces": false
+    }
+}
