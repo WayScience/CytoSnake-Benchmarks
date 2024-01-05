@@ -18,7 +18,7 @@ repos:
   # Code formatter for both python files and jupyter notebooks
   # support pep 8 standards
   - repo: https://github.com/psf/black
-    rev: 23.12.0
+    rev: 23.12.1
     hooks:
       - id: black-jupyter
       - id: black
@@ -27,7 +27,7 @@ repos:
   # adding ruff with auto fix on
   # additional configs are in the pyproject.toml file
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: "v0.1.8"
+    rev: "v0.1.11"
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
